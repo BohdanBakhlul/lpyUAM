@@ -1,0 +1,12 @@
+module F
+Axiom: F
+
+derivation length: 4
+production:
+F --> FF[-(30)-(30)F+(30)F+(30)F][+(30)F-(30)F-(30)F]
+
+interpretation:
+
+F --> F(1)
+
+endlsystem

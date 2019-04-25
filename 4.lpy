@@ -1,0 +1,15 @@
+module main(age), leaf(age)
+Axiom: main(0)
+
+derivation length: 4
+production:
+
+k --> main(0)k
+main(age) --> main(age+1)
+
+
+interpretation:
+
+main(age) --> F(1, 0, 3)
+
+endlsystem

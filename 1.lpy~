@@ -1,0 +1,17 @@
+module A(dir), B(dir)
+Axiom: +(180)_(0.3) A(1)
+
+derivation length: 5
+production:
+A(1) --> A(0)B(1)
+A(0) --> B(0)A(1)
+B(1) --> A(1)
+B(0) --> A(0)
+
+
+interpretation:
+A(dir) --> ,(dir)F(0.5, 0.3)f(0.05)
+B(dir) --> ,(dir)F(0.5, 0.3)f(0.05)
+
+
+endlsystem

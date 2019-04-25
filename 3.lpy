@@ -1,0 +1,23 @@
+import random
+
+module F
+Axiom: F
+
+derivation length: 4
+
+production:
+F:
+  if (random.random() < 0.33):
+    produce F[+(30)F]F[-(30)F]F
+F:
+  if (random.random() < 0.33):
+    produce F[+(30)F]F
+F:
+  if (random.random() < 0.33):
+    produce F[-(30)F]F
+
+interpretation:
+
+F --> F(1)
+
+endlsystem

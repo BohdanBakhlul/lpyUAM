@@ -1,0 +1,11 @@
+module F, sign(dir)
+Axiom: +(180) F
+
+derivation length: 1
+production:
+F --> FF[sign(0)sign(0)Fsign(1)Fsign(1)F][sign(1)Fsign(0)Fsign(0)F]
+
+interpretation:
+
+
+endlsystem
