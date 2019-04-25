@@ -1,15 +1,22 @@
-module main(age), leaf(age)
-Axiom: main(0)
+module Node(age), Leaf(age), G(h)
 
-derivation length: 4
+Axiom: ,(2)_(0.1)Node(0)G(0)
+
+derivation length: 8
 production:
 
-k --> main(0)k
-main(age) --> main(age+1)
-
+G(h):
+   if(h<6):
+      produce Node(0)[iRollL(60)Leaf(0)iRollL(60)Leaf(0)iRollL(60)Leaf(0)iRollL(60)Leaf(0)iRollL(60)Leaf(0)iRollL(60)Leaf(0)]G(h+1)
+   else:
+      produce Node(0)G(h+1)
+Node(age) --> Node(age+1)
+Leaf(age) --> Leaf(age+1)
 
 interpretation:
 
-main(age) --> F(1, 0, 3)
-
+Node(age) --> F(2, 0.1)
+Leaf(age):
+   l = 3 if (age < 5) else 6
+   produce [+(60)F(l, 0.1)]
 endlsystem
